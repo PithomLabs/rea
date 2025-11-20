@@ -1,7 +1,7 @@
 // Package framework provides a high-level abstraction layer for the
 // Restate Go SDK, enforcing all best practices ("dos and don'ts") and
 // eliminating boilerplate when writing Restate services.
-package framework
+package rea
 
 import (
 	"context"
