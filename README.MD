@@ -52,7 +52,7 @@ Clear separation between orchestration and business logic with type-safe abstrac
 - `ObjectClient[I, O]` - For Virtual Objects (key-based addressing)
 - `WorkflowClient[I, O]` - For workflow lifecycle (Submit, Attach, Signal)
 
-📖 Service Patterns Guide
+📖 [Service Patterns Guide](https://github.com/PithomLabs/rea/blob/master/SERVICE_PATTERNS_GUIDE.MD)
 
 ---
 
@@ -82,7 +82,7 @@ saga.Add("charge_card", chargeData, false)
 defer saga.CompensateIfNeeded(&err)
 ```
 
-📖 Saga Guide
+📖 [Saga Guide](https://github.com/PithomLabs/rea/blob/master/SAGA_GUIDE.MD)
 
 ---
 
@@ -108,7 +108,7 @@ if err := balance.Set(1000); err != nil {
 }
 ```
 
-📖 Type Safety Guide
+📖 [Type Safety Guide](https://github.com/PithomLabs/rea/blob/master/TYPE_SAFETY_GUIDE.MD)
 
 ---
 
@@ -132,7 +132,7 @@ cfg := WorkflowConfig{
 }
 ```
 
-📖 Workflow Automation Guide
+📖 [Workflow Automation Guide](https://github.com/PithomLabs/rea/blob/master/WORKFLOW_AUTOMATION_GUIDE.MD)
 
 ---
 
@@ -160,7 +160,7 @@ client.Call(ctx, input, CallOption{
 })
 ```
 
-📖 Idempotency Guide
+📖 [Idempotency Guide](https://github.com/PithomLabs/rea/blob/master/IDEMPOTENCY_GUIDE.MD)
 
 ---
 
@@ -188,7 +188,7 @@ user, err := RunDo(ctx, func(rc restate.RunContext) (User, error) {
 // })
 ```
 
-📖 Run Side Effects Guide
+📖 [Run Side Effects Guide](https://github.com/PithomLabs/rea/blob/master/RUN_SIDE_EFFECTS_GUIDE.MD)
 
 ---
 
@@ -218,7 +218,7 @@ for fut, err := range restate.Wait(ctx, fut1, fut2) {
 }
 ```
 
-📖 Concurrency Patterns Guide
+📖 [Concurrency Patterns Guide](https://github.com/PithomLabs/rea/blob/master/CONCURRENCY_PATTERNS_GUIDE.MD)
 
 ---
 
@@ -246,7 +246,7 @@ if err := ValidateInput(req); err != nil {
 }
 ```
 
-📖 Security Guide
+📖 [Security Guide](https://github.com/PithomLabs/rea/blob/master/SECURITY_GUIDE.MD)
 
 ---
 
@@ -278,7 +278,7 @@ result, err := svcClient.Call(context.Background(), order,
 
 ⚠️ **Critical:** Never use `IngressClient` inside a Restate handler - bypasses journaling!
 
-📖 Ingress Client Guide
+📖 [Ingress Client Guide](https://github.com/PithomLabs/rea/blob/master/INGRESS_CLIENT_GUIDE.MD)
 
 ---
 
@@ -312,7 +312,7 @@ http.HandleFunc("/metrics", func(w http.ResponseWriter, r *http.Request) {
 })
 ```
 
-📖 Observability Guide
+📖 [Observability Guide](https://github.com/PithomLabs/rea/blob/master/OBSERVABILITY_GUIDE.MD)
 
 ---
 
@@ -341,7 +341,7 @@ SetFrameworkPolicy(PolicyStrict)
 - Saga compensation registration
 - Context usage validation
 
-📖 Framework Policy
+📖 [Framework Policy](https://github.com/PithomLabs/rea/blob/master/FRAMEWORK_POLICY.MD)
 
 ---
 
@@ -356,7 +356,7 @@ High-level patterns for coordinating multiple services.
 - **Service Mesh Integration** - Distributed tracing context propagation
 - **Human-in-the-Loop** - Approval workflows with awakeables
 
-📖 Microservices Orchestration Guide
+📖 [Microservices Orchestration Guide](https://github.com/PithomLabs/rea/blob/master/MICROSERVICES_ORCHESTRATION_GUIDE.MD)
 
 ---
 
@@ -365,7 +365,7 @@ High-level patterns for coordinating multiple services.
 ### Installation
 
 ```go
-import framework "github.com/your-org/rea-framework"
+import framework "github.com/pithomlabs/rea"
 ```
 
 ### Basic Service
@@ -435,38 +435,38 @@ func (CartObject) AddItem(ctx restate.ObjectContext, item Item) error {
 ## 📖 Complete Documentation
 
 ### Core Concepts
-- [Service Patterns Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/SERVICE_PATTERNS_GUIDE.MD)
-- [Service Clients Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/SERVICE_CLIENTS_GUIDE.MD)
-- [Type Safety Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/TYPE_SAFETY_GUIDE.MD)
+- [Service Patterns Guide](https://github.com/PithomLabs/rea/blob/master/SERVICE_PATTERNS_GUIDE.MD)
+- [Service Clients Guide](https://github.com/PithomLabs/rea/blob/master/SERVICE_CLIENTS_GUIDE.MD)
+- [Type Safety Guide](https://github.com/PithomLabs/rea/blob/master/TYPE_SAFETY_GUIDE.MD)
 
 ### Workflows & Orchestration
-- [Workflow Automation Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/WORKFLOW_AUTOMATION_GUIDE.MD)
-- [Saga Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/SAGA_GUIDE.MD)
-- [Enhanced Saga Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/ENHANCED_SAGA_GUIDE.MD)
-- [Microservices Orchestration](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/MICROSERVICES_ORCHESTRATION_GUIDE.MD)
+- [Workflow Automation Guide](https://github.com/PithomLabs/rea/blob/master/WORKFLOW_AUTOMATION_GUIDE.MD)
+- [Saga Guide](https://github.com/PithomLabs/rea/blob/master/SAGA_GUIDE.MD)
+- [Enhanced Saga Guide](https://github.com/PithomLabs/rea/blob/master/ENHANCED_SAGA_GUIDE.MD)
+- [Microservices Orchestration](https://github.com/PithomLabs/rea/blob/master/MICROSERVICES_ORCHESTRATION_GUIDE.MD)
 
 ### Concurrency & Side Effects
-- [Concurrency Patterns Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/CONCURRENCY_PATTERNS_GUIDE.MD)
-- [Run Side Effects Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/RUN_SIDE_EFFECTS_GUIDE.MD)
+- [Concurrency Patterns Guide](https://github.com/PithomLabs/rea/blob/master/CONCURRENCY_PATTERNS_GUIDE.MD)
+- [Run Side Effects Guide](https://github.com/PithomLabs/rea/blob/master/RUN_SIDE_EFFECTS_GUIDE.MD)
 
 ### Best Practices
-- [Idempotency Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/IDEMPOTENCY_GUIDE.MD)
-- [Validation Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/VALIDATION_GUIDE.MD)
-- [Security Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/SECURITY_GUIDE.MD)
+- [Idempotency Guide](https://github.com/PithomLabs/rea/blob/master/IDEMPOTENCY_GUIDE.MD)
+- [Validation Guide](https://github.com/PithomLabs/rea/blob/master/VALIDATION_GUIDE.MD)
+- [Security Guide](https://github.com/PithomLabs/rea/blob/master/SECURITY_GUIDE.MD)
 
 ### External Integration
-- [Ingress Client Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/INGRESS_CLIENT_GUIDE.MD)
-- [Ingress Type Safety](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/INGRESS_CLIENT_TYPE_SAFETY.MD)
+- [Ingress Client Guide](https://github.com/PithomLabs/rea/blob/master/INGRESS_CLIENT_GUIDE.MD)
+- [Ingress Type Safety](https://github.com/PithomLabs/rea/blob/master/INGRESS_CLIENT_TYPE_SAFETY.MD)
 
 ### Observability
-- [Observability Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/OBSERVABILITY_GUIDE.MD)
+- [Observability Guide](https://github.com/PithomLabs/rea/blob/master/OBSERVABILITY_GUIDE.MD)
 
 ### Configuration & Policy
-- [Framework Policy](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/FRAMEWORK_POLICY.MD)
-- [Workflow Retention Guide](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/WORKFLOW_RETENTION_GUIDE.MD)
+- [Framework Policy](https://github.com/PithomLabs/rea/blob/master/FRAMEWORK_POLICY.MD)
+- [Workflow Retention Guide](https://github.com/PithomLabs/rea/blob/master/WORKFLOW_RETENTION_GUIDE.MD)
 
 ### Reference
-- [DOS and DON'Ts](file:///home/chaschel/Documents/ibm/go/apps/restate/examples/evals/rea2/claude/DOS_DONTS_MEGA.MD)
+- [DOS and DON'Ts](https://github.com/PithomLabs/rea/blob/master/DOS_DONTS.MD)
 
 
 ---
