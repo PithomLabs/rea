@@ -58,7 +58,7 @@ Clear separation between orchestration and business logic with type-safe abstrac
 
 ### 2. **Durable Saga Framework**
 
-Production-ready distributed transaction compensation with automatic retry, dead-letter queue, and compensation strategies.
+Distributed transaction compensation with automatic retry, dead-letter queue, and compensation strategies.
 
 **Features:**
 - Pre-action compensation registration (enforced)
@@ -557,11 +557,11 @@ client.Call(ctx, key, input) // Key required at compile time
 
 ## 🤝 Contributing
 
-This framework embodies best practices learned from production Restate deployments. Contributions should:
+Contributions should:
 1. Follow the Control Plane / Data Plane separation
 2. Add guardrails for new anti-patterns discovered
 3. Include comprehensive documentation
-4. Provide both positive and negative examples
+4. Provide examples using this framework
 ---
 
 ## 📝 License
