@@ -2,7 +2,7 @@
 
 > **High-level abstraction framework for building robust, durable distributed applications with Restate**
 
-The Rea ("Restate Enhanced Abstractions") framework is a comprehensive Go library that wraps the Restate SDK with opinionated best practices, type safety, and developer-friendly APIs. It eliminates boilerplate, prevents common anti-patterns, and provides production-ready patterns for distributed orchestration.
+The Rea ("Restate Enhanced Abstractions") framework is a comprehensive Go library that wraps the Restate SDK with opinionated best practices, type safety, and developer-friendly APIs. It minimizes boilerplate and provides robust patterns for distributed orchestration.
 
 ---
 
